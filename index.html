@@ -1,8 +1,110 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <title>My Favorite Theorem</title>
+      <link rel="stylesheet" href="styles.css">
    </head>
    <body>
-      <!-- Write your HTML in this file! -->
+      <header>
+         <h1 id="mainHeading">My Favorite Theorem</h1>
+         <nav>
+            <ul>
+               <li><a href="#intro">Introduction</a></li>
+               <li><a href="#theorem">The Pigeonhole Principle</a></li>
+               <li><a href="#consequences">Cool Consequences</a>
+                  <ul id = "consequences">
+                     <li class = "consequences"><a href="#fact1">Hair Twins in New York</a></li>
+                     <li class = "consequences"><a href="#fact2">Points on a Sphere</a></li>
+                     <li class = "consequences"><a href="#fact3">Chess Boards and Dominos</a></li>
+                     <li class = "consequences"><a href="#fact4">Data Compression</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </header>
+
+      <main>
+         <article>
+            <section>
+               <a name="intro"></a>
+               <figure>
+                  <img src="/images/pigeons.png" alt="Too many pigeons">
+               </figure>
+               <h2>Introduction</h2>
+               <p id="testP" class="funParagraph">Everyone should have a favorite theorem.  Mine happens to be the pigeonhole principle.  My favorite
+                  aspect of the pigeonhole principle is its incredible simplicity.  It is something that anyone can understand
+                  without much (or any) effort, but that does not mean it lacks in power.  In fact, the pigeonhole principle
+                  is used to prove many serious results in many fields of mathematics.  It also has some interesting
+                  consequences that apply to real-life scenarios.  A few are presented below.
+               </p>
+            </section>
+            <section>
+               <a name="theorem"></a>
+               <h2>Theorem Statement</h2>
+               <p>The pigeonhole principle states that if you have more pigeons than pigeonholes, trying to
+                  place all pigeons in pigeonholes must results in a hole containing more than one pigeon.  More
+                  formally, if we place <i>m</i> pigeons into <i>n</i> pigeonholes where <i>m</i> &gt; <i>n</i>, then 
+                  there is at least one pigeonhole containing more than one pigeon.
+               </p>
+            </section>
+            <section>
+               <a name="consequences"></a>
+               <h2>Cool Consequences</h2>
+            </section>
+            <section>
+               <a name="fact1"></a>
+               <h3>Hair Twins in New York</h3>
+               <img src="/images/hairs.png">
+               <p class="fact"><i>Fact: there are two non-bald people in New York city who have the same number of hairs on their head</i>.</p>  
+               <p>Why is this true?
+               Well, the population of New York City is roughly 8.4 million.  On the other hand, the average human has around 100,000 hairs
+               on their head.  Now we will insist on a maximum number of hairs on a human head, let's say 1 million (this is more than reasonable considering the average).
+               Now if we let each person in New York City be a 'pigeon' and let the distinct number of hairs on a non-bald person be our 'pigeonholes' (that is, our 'pigeonholes' are the numbers 1-1,000,000), we clearly
+               have many more pigeons than pigeonholes.  So at least one hole receives two pigeons, or in the context of this example, there must be
+               two non-bald people in New York City with exactly the same number of hairs on their heads.</p>
+            </section>
+            <section>
+               <a name="fact2"></a>
+               <h3>Points on a Sphere</h3>
+               <img src="/images/circles.png">
+               <p class="fact"> 
+                  <i>Fact: Draw 5 points on an orange.  It is always possible to cut the orange so that 4 of the points are in the same hemisphere</i>.</p>
+               <p>
+                  Ok so we have to be a little picky about what it means to be in a hemisphere for this to work.  Namely, if a point on 
+                  the orange lies on the cut, we will insist that it is on both hemispheres.  Now pick two points of the five.  These two points
+                  determine a <i>great circle</i>, which is a circle of the largest possible size drawn on the sphere (think of earth's equator).
+                  Use this great circle to cut the orange in half.  There are 3 points remaining (our pigeons) that were not on the cut.  Since there are only two halves (our pigeonholes),
+                  at least one half must contain two of the points.  Together with the two points on the cut, we have 4 points contained in one hemisphere!
+
+               </p>
+            </section>
+            <section>
+               <a name="fact3"></a>
+               <h3>Chess Boards and Dominos</h3>
+               <img src="/images/chess.png">
+               <p class="fact"><i>Fact: Consider a standard chess board with two diagonally opposite corner spaces removed.  It is impossible to cover the board with
+                  dominos that have a length of two board spaces..
+               </i></p>
+               <p>To see why this is true, note that the board with two corners removed has 62 squares.  Also note that diagonally opposite corners of the chess board have the same color.
+                  For the sake of this discussion, assume we removed the two black corner spaces (the argument is the same if we remove the white corners, just interchange white with black).
+                  Now, since there are 62 squares and each domino covers two spaces, we need 31 dominos to cover the board.  These will be our pigeonholes.  Since we removed the black corner spaces,
+                  there are 32 white spaces on the board (our pigeons).  When we try to put our pigeons into our pigeonholes, or match our white spaces with our dominos,
+                  we see that one domino will have to cover 2 white spaces.  But white spaces are not adjacent on a chess board, and so this is impossible!
+               </p>
+            </section>
+            <section>
+               <a name="fact4"></a>
+               <h3>Data Compression</h3>
+               <p class="fact"]><i>Fact: It is impossible to make a lossless data compression algorithm which makes all input data strictly smaller</i>.</p>
+               <p>
+                  In fact, for any lossless data compression algorithm that makes one file shorter, there must be another file that
+                  increases in size!  The details of this are a little more complicated than the previous examples, but this is still a fact
+                  that follows directly from the pigeonhole pricinple.  The motivated reader can find more details of why this is true <a href="https://en.wikipedia.org/wiki/Lossless_compression#Limitations">here</a>.
+               </p>
+            </section>
+
+         </article>
+      </main>
+      <footer>&copy; 2021 Sam Ewing</footer>
    </body>
 </html>
