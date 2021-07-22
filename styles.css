@@ -1,1 +1,64 @@
-/* Write your CSS here! */
+body {
+    margin: 8px;
+    display: block;
+}
+
+
+#mainHeading {
+    color: red;
+    border: 2px black solid;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+li.consequences {
+    list-style-type: lower-alpha;
+}
+
+.funParagraph {
+    color: green;
+}
+
+.fact {
+    display: block;
+    color: green;
+    font-size: 18px;
+    text-decoration: bold;
+    width: 70%;
+}
+
+li {
+    padding: 3px;
+    font-family: 'Arial', sans-serif;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 450px;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    border: 1px black solid;
+    background-color: coral;
+}
+
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
